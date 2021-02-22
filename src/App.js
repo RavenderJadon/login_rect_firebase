@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import fire from "./Fire";
 import "./App.css";
 import Login from "./Login";
+import Hero from "./Hero";
 
 function App() {
   const [user, setUser] = useState("");
@@ -85,18 +86,22 @@ function App() {
 
   return (
     <div className="App">
-      <Login
-        email={email}
-        setEmail={setEmail}
-        password={password}
-        setPassword={setPassword}
-        handleLogin={handleLogin}
-        handelSignup={handelSignup}
-        hasAccount={hasAccount}
-        setHasAccount={setHasAccount}
-        emailError={emailError}
-        passwordError={passwordError}
-      />
+      {user ? (
+        <Hero handelLogout={handelLogout} />
+      ) : (
+        <Login
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+          handleLogin={handleLogin}
+          handelSignup={handelSignup}
+          hasAccount={hasAccount}
+          setHasAccount={setHasAccount}
+          emailError={emailError}
+          passwordError={passwordError}
+        />
+      )}
     </div>
   );
 }

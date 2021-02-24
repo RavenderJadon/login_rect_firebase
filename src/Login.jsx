@@ -18,6 +18,8 @@ const Login = (props) => {
     { firstname: "third", lastname: "lastthird" },
   ];
   console.log(data);
+  console.log(data);
+
 
 
 

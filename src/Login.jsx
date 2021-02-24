@@ -12,17 +12,6 @@ const Login = (props) => {
     passwordError,
   } = props;
 
-  let data = [
-    { firstname: "first", lastname: "lastfirst" },
-    { firstname: "second", lastname: "lastSecond" },
-    { firstname: "third", lastname: "lastthird" },
-  ];
-  console.log(data);
-  console.log(data);
-
-
-
-
   return (
     <section className="login">
       <div className="loginContainer">
